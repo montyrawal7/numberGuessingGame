@@ -36,7 +36,7 @@
     let resetButton;
 
     function checkGuess() {
-
+ guessSubmit.addEventListener('click', checkGuess);
       let userGuess = Number(guessField.value);
       if (guessCount === 1) {
         guesses.textContent = "Previous Guesses:";
@@ -65,7 +65,7 @@
       guessField.value = "";
       guessField.focus();
     }
-    guessSubmit.addEventListener('click', checkGuess);
+   
 
     function setGameOver() {
       guessField.disabled = true;
